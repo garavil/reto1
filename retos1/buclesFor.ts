@@ -25,7 +25,7 @@ function isRainbow(colors:string[]){
     }
 }
 
-function add(myWords: string[]): number{
+export function add(myWords: string[]): number{
     let sumaTotal: number= 0;
     for(let i = 0; i< myWords.length ; i++){
         sumaTotal += myWords[i].length
