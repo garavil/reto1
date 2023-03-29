@@ -43,4 +43,18 @@ export class Point{
             return 4
         }
     }
+    calcultateNearest(arrPoints:Point[]){
+        let arrDist:number[] = []
+        for(let i = 0; i< arrPoints.length ; i++){
+            let dist = this.calculateDistance(arrPoints[i])
+            arrDist.push(dist)
+        } 
+        let numMin = Math.min(...arrDist)
+        for (let i = 0; i< arrDist.length ; i++){
+            if (arrDist[i] == numMin){
+                return arrPoints[i]
+            }
+        }
+    } 
+    
 }
